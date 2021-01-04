@@ -22,7 +22,9 @@
     "bootstrap": "^4.5.3",
     "json-server": "^0.16.1",
     "mongodb": "^3.6.3",
+    "ng2-slim-loading-bar": "^4.0.0",
     "rxjs": "~6.5.5",
+    "rxjs-compat": "^6.6.3",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },

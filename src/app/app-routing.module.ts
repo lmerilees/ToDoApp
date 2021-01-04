@@ -5,20 +5,20 @@ import { TaskAddComponent } from './task-add/task-add.component';
 import { TaskEditComponent } from './task-edit/task-edit.component';
 import { TaskGetComponent } from './task-get/task-get.component';
 
-const routes: Routes = [];
-
-{
-  path: 'task/create',
-  component: TaskAddComponent
-},
-{
-  path: 'edit/:id',
-  component: TaskEditComponent
-},
-{
-  path: 'tasks',
-  component: TaskGetComponent
-}
+const routes: Routes = [
+  {
+    path: 'task/create',
+    component: TaskAddComponent
+  },
+  {
+    path: 'edit/:id',
+    component: TaskEditComponent
+  },
+  {
+    path: 'tasks',
+    component: TaskGetComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
