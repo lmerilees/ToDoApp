@@ -1,1 +1,6 @@
 @import "../node_modules/ng2-slim-loading-bar/style.css";
+
+body{
+    color: white;
+    background-color:darkslategrey;
+}
