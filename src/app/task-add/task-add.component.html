@@ -13,9 +13,9 @@
         </div>  
       </div>  
       <div class="form-group">  
-        <label class="col-md-4">task Description </label>  
+        <label class="col-md-4">Task Description </label>  
         <textarea class="form-control" rows = 7 cols = "5"  
-        formControlName="taskDescription"   
+        formControlName="TaskDescription"   
         #TaskDescription></textarea>  
       </div>  
       <div *ngIf="angForm.controls['TaskDescription'].invalid && (angForm.controls['TaskDescription'].dirty || angForm.controls['TaskDescription'].touched)" class="alert alert-danger">  
@@ -24,23 +24,11 @@
         </div>  
       </div>  
       <div class="form-group">  
-        <label class="col-md-4">Task Price</label>  
-        <input type="text" class="form-control"   
-          formControlName="TaskPrice"   
-          #TaskPrice  
-        />  
-      </div>  
-      <div *ngIf="angForm.controls['TaskPrice'].invalid && (angForm.controls['TaskPrice'].dirty || angForm.controls['TaskPrice'].touched)" class="alert alert-danger">  
-        <div *ngIf="angForm.controls['TaskPrice'].errors.required">  
-          Task Price is required.  
-        </div>  
-      </div>  
-      <div class="form-group">  
-        <button type="submit" class="btn btn-primary"  
+        <button (click) = "addTask(TaskName.value, TaskDescription.value)" type="submit" class="btn btn-primary"  
         [disabled]="angForm.pristine || angForm.invalid" >  
           Create Task  
         </button>  
       </div>  
-    </form>  
+    </form>
   </div>  
 </div>  

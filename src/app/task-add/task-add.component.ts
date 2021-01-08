@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';  
 import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';  
+import { TasksService } from '../tasks.service';
 @Component({  
   selector: 'app-task-add',  
   templateUrl: './task-add.component.html',  
@@ -7,7 +8,7 @@ import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
 })  
 export class TaskAddComponent implements OnInit {  
   angForm: FormGroup;  
-  constructor(private fb: FormBuilder) {  
+  constructor(private fb: FormBuilder, private ts: TasksService) {  
     this.createForm();  
   }  
   createForm() {  
@@ -16,6 +17,9 @@ export class TaskAddComponent implements OnInit {
       TaskDescription: ['', Validators.required ]
     });  
   }  
+  addTask(ProductName, ProductDescription) {  
+    this.ts.addTask(ProductName, ProductDescription)
+  }
   ngOnInit() {  
   }  
 }  

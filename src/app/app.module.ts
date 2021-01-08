@@ -8,6 +8,7 @@ import { TaskEditComponent } from './task-edit/task-edit.component';
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TasksService } from './tasks.service';
 
 
 @NgModule({
@@ -22,9 +23,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     SlimLoadingBarModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ TasksService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
