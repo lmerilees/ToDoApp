@@ -15,4 +15,11 @@ uri = 'http://localhost:4000/tasks';
     console.log(obj);
     this.http.post('${this.uri}/add', obj)
   }
+
+getTasks() {  
+  return this  
+         .http  
+         .get(`${this.uri}`);  
+}  
+
 }
